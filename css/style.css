@@ -73,12 +73,24 @@ header a#logo span {
     font-size: 1.3em;
 }
 
-header span#contact {
-    float: right;
-    width: 40%;
-    margin-right: 20%;
-    font-family: Times New Roman, sans-serif
+@media (min-width: 416px) {
+    header span#contact {
+        float: right;
+        width: 40%;
+        margin-right: 20%;
+        font-family: Times New Roman, sans-serif
+    }
 }
+
+@media (max-width: 415px) {
+    header span#contact {
+        float: right;
+        width: 80%;
+        margin-right: 10%;
+        font-family: Times New Roman, sans-serif
+    }
+}
+
 
 header span#contact a {
     color: white;
@@ -92,12 +104,79 @@ header span#contact a:hover {
     color: #e0e0e0;
 }
 
-nav {
-    width: 98%;
-    float: left;
-    background-color: #ffffff;
-    padding: 0 1% 0.7% 1%;
+@media(min-width: 900px) {
+    nav {
+        width: 98%;
+        float: left;
+        background-color: #ffffff;
+        padding: 0 1% 0.7% 1%;
+    }
+
+    nav a:first-child,
+    nav#fixed a:first-child {
+        margin-left: 12%;
+        border-top: 5px solid #6accd7;
+    }
+
+    nav a,
+    nav#fixed a {
+        border-top: 5px solid rgba(255, 255, 255, 0);
+        padding: 0.5% 1% 0 1%;
+        float: left;
+        margin-right: 4%;
+        font-family: Times New Roman, sans-serif;
+        font-size: 1.4em;
+        color: #686869;
+    }
 }
+
+@media(max-width: 899px) and (min-width: 370px) {
+    nav {
+        width: 99%;
+        float: left;
+        background-color: #ffffff;
+        padding: 0 0.5% 0.7% 0.5%;
+    }
+
+    nav a:first-child,
+    nav#fixed a:first-child {
+        margin-left: 4%;
+        border-top: 5px solid #6accd7;
+    }
+
+    nav a,
+    nav#fixed a {
+        border-top: 5px solid rgba(255, 255, 255, 0);
+        padding: 0.5% 1% 0 1%;
+        float: left;
+        margin-right: 4%;
+        font-family: Times New Roman, sans-serif;
+        font-size: 1.4em;
+        color: #686869;
+    }
+}
+
+@media(max-width: 369px) {
+
+    nav a:first-child,
+    nav#fixed a:first-child {
+        width: 80%;
+        margin-left: 10%;
+        border: 0;
+    }
+
+    nav a {
+        border: 0;
+        float: left;
+        font-family: Times New Roman, sans-serif;
+        font-size: 1.4em;
+        color: #686869;
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+
 
 nav#fixed {
     position: fixed;
@@ -114,22 +193,9 @@ nav#fixed:hover {
     background-color: #fff;
 }
 
-nav a:first-child,
-nav#fixed a:first-child {
-    margin-left: 12%;
-    border-top: 5px solid #6accd7;
-}
 
-nav a,
-nav#fixed a {
-    border-top: 5px solid rgba(255, 255, 255, 0);
-    padding: 0.5% 1% 0 1%;
-    float: left;
-    margin-right: 4%;
-    font-family: Times New Roman, sans-serif;
-    font-size: 1.4em;
-    color: #686869;
-}
+
+
 
 nav a:hover,
 nav#fixed a:hover {
@@ -152,6 +218,7 @@ nav#fixed a:hover {
 		Основная часть сайта
 ----------------------------------*/
 
+
 #wrapper {
     width: 80%;
     margin-left: 10%;
@@ -162,11 +229,24 @@ nav#fixed a:hover {
 		Левая часть сайта
 ----------------------------------*/
 
-#wrapper #leftCol {
-    width: 65%;
-    margin-right: 10%;
-    float: left;
+@media (min-width: 691px) {
+    #wrapper #leftCol {
+        width: 65%;
+        margin-right: 10%;
+        float: left;
+    }
 }
+
+@media (max-width: 690px) {
+    #wrapper #leftCol {
+        width: 90%;
+        margin-right: 5%;
+        float: left;
+        margin-bottom: 20px;
+    }
+}
+
+
 
 #leftCol article {
     width: 100%;
@@ -221,9 +301,19 @@ nav#fixed a:hover {
 		Правая часть сайта
 ----------------------------------*/
 
-#wrapper #rightCol {
-    width: 25%;
-    float: left;
+@media (min-width: 691px) {
+    #wrapper #rightCol {
+        width: 25%;
+        float: left;
+    }
+}
+
+@media (max-width: 690px) {
+    #wrapper #rightCol {
+        width: 80%;
+        margin-left: 10%;
+        float: left;
+    }
 }
 
 #rightCol .banner {
